@@ -1,6 +1,7 @@
 const express = require('express');
 const allRoutes = require('./controllers');
 const sequelize = require('./config/connection');
+const cors = require("cors")
 //TODO: allow cross-origin resource sharing (CORS)
 
 // Sets up the Express App
@@ -14,6 +15,7 @@ const { User} = require('./models');
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors())
 app.use('/',allRoutes);
 
 
