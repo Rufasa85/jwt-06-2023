@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS tokens_db;
+CREATE DATABASE tokens_db;
